@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>js,currency converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-card col-4 col-md-6 col-lg-4">
+        <h2 class="text-center">Currency Converter</h2>
+
+        <label for="amount" class="col w-100 mt-3">
+            Enter amount
+            <input type="number" name="amount" class="form-control col" id="amount" placeholder="Qiymatni kiriting">
+        </label>
+
+        <div class="d-flex mt-3 justify-content-between">
+            <!-- from select -->
+            <label for="from" class="col-4">
+                From
+                <br>
+                <select name="from" id="from" class="form-control">
+                    <option value="usd">USD</option>
+                    <option value="uzs">UZS</option>
+                    <option value="rub">RUB</option>
+                </select>
+            </label>
+
+            <!-- button -->
+            <button class="btn mt-3" id="converter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                </svg>
+            </button>
+
+            <!-- to select -->
+            <label for="to" class="col-4">
+                To
+                <select name="to" id="to" class="form-control">
+                    <option value="uzs">UZS</option>
+                    <option value="usd">USD</option>
+                    <option value="rub">RUB</option>
+                </select>
+            </label>
+        </div>
+        <!-- result -->
+        <div id="result" class="mt-2 d-none">
+            <p><span id="from-result"></span> = <span id="to-result"></span></p>
+        </div>
+
+        <button id="get-exchange-rate" type="button" class="btn text-light mt-4 col-12">Get Exchange Rate</button>
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="./app.js"></script>
+
+</html>
